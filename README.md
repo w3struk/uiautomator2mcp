@@ -52,6 +52,25 @@ command = "uvx"
 args = ["uiautomator2-mcp"]
 ```
 
+### opencode
+
+Add `uiautomator2-mcp` as a local MCP server in your opencode configuration (`opencode.json` or `opencode.jsonc`):
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "uiautomator2": {
+      "type": "local",
+      "command": ["uvx", "uiautomator2-mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
+After saving the configuration, start opencode and ask it to use the `uiautomator2` MCP tools. For more details, see the [opencode MCP servers documentation](https://opencode.ai/docs/ru/mcp-servers).
+
 ### Alternative methods
 
 ```bash
