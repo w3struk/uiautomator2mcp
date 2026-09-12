@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "uiautomator2-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server for Android device automation via uiautomator2"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Software Development :: Testing",
 ]
 dependencies = [
-    "mcp>=1.0.0",
+    "mcp>=1.2.0",
     "uiautomator2>=3.0.0",
     "Pillow>=9.0.0",
 ]

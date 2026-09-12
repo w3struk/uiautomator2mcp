@@ -13,7 +13,11 @@ from typing import Any, cast
 from xml.etree import ElementTree as ET
 
 from mcp import types
-from mcp.server.fastmcp import FastMCP
+
+try:  # mcp 2.x (mcp.server.fastmcp was removed)
+    from mcp.server.mcpserver import MCPServer as FastMCP
+except ImportError:  # mcp 1.x fallback
+    from mcp.server.fastmcp import FastMCP
 
 from uiautomator2_mcp.adb_tools import (
     list_avds as list_available_avds,
